@@ -7,35 +7,46 @@ import clsx from 'clsx'
 
 import { Container } from '@/components/Container'
 import backgroundImage from '@/images/background-features.jpg'
-import screenshotExpenses from '@/images/screenshots/expenses.png'
-import screenshotPayroll from '@/images/screenshots/payroll.png'
-import screenshotReporting from '@/images/screenshots/reporting.png'
-import screenshotVatReturns from '@/images/screenshots/vat-returns.png'
+import screenshotFeatures from '@/images/screenshots/features.png'
 
 const features = [
   {
     title: 'Payroll',
     description:
       "Keep track of everyone's salaries and whether or not they've been paid. Direct deposit not supported.",
-    image: screenshotPayroll,
+    image: screenshotFeatures,
   },
   {
-    title: 'Claim expenses',
+    title: 'Invoicing',
     description:
       "All of your receipts organized into one place, as long as you don't mind typing in the data by hand.",
-    image: screenshotExpenses,
+    image: screenshotFeatures,
   },
   {
-    title: 'VAT handling',
+    title: 'Inventory',
     description:
       "We only sell our software to companies who don't deal with VAT at all, so technically we do all the VAT stuff they need.",
-    image: screenshotVatReturns,
+    image: screenshotFeatures,
   },
   {
-    title: 'Reporting',
-    description:
-      'Easily export your data into an Excel spreadsheet where you can do whatever the hell you want with it.',
-    image: screenshotReporting,
+    title: 'Time Tracking',
+    description: '',
+    image: screenshotFeatures,
+  },
+  {
+    title: 'Quarterly Taxes',
+    description: '',
+    image: screenshotFeatures,
+  },
+  {
+    title: 'Accounts Payable/Receivable',
+    description: '',
+    image: screenshotFeatures,
+  },
+  {
+    title: 'As Well As Catch-Up/Clean-Up Services',
+    description: '',
+    image: screenshotFeatures,
   },
 ]
 
@@ -74,12 +85,12 @@ export function PrimaryFeatures() {
       <Container className="relative">
         <div className="max-w-2xl md:mx-auto md:text-center xl:max-w-none">
           <h2 className="font-display text-3xl tracking-tight text-white sm:text-4xl md:text-5xl">
-            Everything you need to run your books.
+            Here’s A List of The Services We Offer You
           </h2>
-          <p className="mt-6 text-lg tracking-tight text-blue-100">
+          {/* <p className="mt-6 text-lg tracking-tight text-blue-100">
             Well everything you need if you aren’t that picky about minor
             details like tax compliance.
-          </p>
+          </p> */}
         </div>
         <Tab.Group
           as="div"
@@ -95,9 +106,7 @@ export function PrimaryFeatures() {
                       key={feature.title}
                       className={clsx(
                         'group relative rounded-full px-4 py-1 lg:rounded-l-xl lg:rounded-r-none lg:p-6',
-                        selectedIndex === featureIndex
-                          ? 'bg-white lg:bg-white/10 lg:ring-1 lg:ring-inset lg:ring-white/10'
-                          : 'hover:bg-white/10 lg:hover:bg-white/5',
+                        
                       )}
                     >
                       <h3>
@@ -113,7 +122,7 @@ export function PrimaryFeatures() {
                           {feature.title}
                         </Tab>
                       </h3>
-                      <p
+                      {/* <p
                         className={clsx(
                           'mt-2 hidden text-sm lg:block',
                           selectedIndex === featureIndex
@@ -122,7 +131,7 @@ export function PrimaryFeatures() {
                         )}
                       >
                         {feature.description}
-                      </p>
+                      </p> */}
                     </div>
                   ))}
                 </Tab.List>

@@ -5,11 +5,11 @@ import '@/styles/tailwind.css'
 
 export const metadata = {
   title: {
-    template: '%s - TaxPal',
-    default: 'TaxPal - Accounting made simple for small businesses',
+    template: '%s - DEAD COLR',
+    default: 'DEAD COLR Bookkeeping',
   },
   description:
-    'Most bookkeeping software is accurate, but hard to use. We make the opposite trade-off, and hope you don’t get audited.',
+    'With DEAD COLR, your bookkeeping is on autopilot.',
 }
 
 const inter = Inter({

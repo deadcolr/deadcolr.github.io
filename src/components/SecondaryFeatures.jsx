@@ -6,6 +6,7 @@ import { Tab } from '@headlessui/react'
 import clsx from 'clsx'
 
 import { Container } from '@/components/Container'
+import { Button } from '@/components/Button'
 import screenshotContacts from '@/images/screenshots/contacts.png'
 import screenshotInventory from '@/images/screenshots/inventory.png'
 import screenshotProfitLoss from '@/images/screenshots/profit-loss.png'
@@ -13,9 +14,9 @@ import screenshotProfitLoss from '@/images/screenshots/profit-loss.png'
 const features = [
   {
     name: 'Reporting',
-    summary: 'Stay on top of things with always up-to-date reporting features.',
+    summary: 'Answer Three Questions',
     description:
-      'We talked about reporting in the section above but we needed three items here, so mentioning it one more time for posterity.',
+      'Fill out this short, 60-second questionnaire to get started.',
     image: screenshotProfitLoss,
     icon: function ReportingIcon() {
       let id = useId()
@@ -48,9 +49,9 @@ const features = [
   {
     name: 'Inventory',
     summary:
-      'Never lose track of what’s in stock with accurate inventory tracking.',
+      'Get An Estimate',
     description:
-      'We don’t offer this as part of our software but that statement is inarguably true. Accurate inventory tracking would help you for sure.',
+      'Choose between call or text for your estimate.',
     image: screenshotInventory,
     icon: function InventoryIcon() {
       return (
@@ -76,9 +77,9 @@ const features = [
   {
     name: 'Contacts',
     summary:
-      'Organize all of your contacts, service providers, and invoices in one place.',
+      'Automate Your Books',
     description:
-      'This also isn’t actually a feature, it’s just some friendly advice. We definitely recommend that you do this, you’ll feel really organized and professional.',
+      'We’ll take care of your books so you can handle business.',
     image: screenshotContacts,
     icon: function ContactsIcon() {
       return (
@@ -104,7 +105,7 @@ function Feature({ feature, isActive, className, ...props }) {
       className={clsx(className, !isActive && 'opacity-75 hover:opacity-100')}
       {...props}
     >
-      <div
+      {/* <div
         className={clsx(
           'w-9 rounded-lg',
           isActive ? 'bg-blue-600' : 'bg-slate-500',
@@ -113,14 +114,14 @@ function Feature({ feature, isActive, className, ...props }) {
         <svg aria-hidden="true" className="h-9 w-9" fill="none">
           <feature.icon />
         </svg>
-      </div>
+      </div> */}
       <h3
         className={clsx(
           'mt-6 text-sm font-medium',
           isActive ? 'text-blue-600' : 'text-slate-600',
         )}
       >
-        {feature.name}
+        {/* {feature.name} */}
       </h3>
       <p className="mt-2 font-display text-xl text-slate-900">
         {feature.summary}
@@ -176,32 +177,21 @@ function FeaturesDesktop() {
               />
             ))}
           </Tab.List>
-          <Tab.Panels className="relative mt-20 overflow-hidden rounded-4xl bg-slate-200 px-14 py-16 xl:px-16">
-            <div className="-mx-5 flex">
-              {features.map((feature, featureIndex) => (
-                <Tab.Panel
-                  static
-                  key={feature.summary}
-                  className={clsx(
-                    'px-5 transition duration-500 ease-in-out ui-not-focus-visible:outline-none',
-                    featureIndex !== selectedIndex && 'opacity-60',
-                  )}
-                  style={{ transform: `translateX(-${selectedIndex * 100}%)` }}
-                  aria-hidden={featureIndex !== selectedIndex}
-                >
-                  <div className="w-[52.75rem] overflow-hidden rounded-xl bg-white shadow-lg shadow-slate-900/5 ring-1 ring-slate-500/10">
-                    <Image
-                      className="w-full"
-                      src={feature.image}
-                      alt=""
-                      sizes="52.75rem"
-                    />
-                  </div>
-                </Tab.Panel>
-              ))}
-            </div>
-            <div className="pointer-events-none absolute inset-0 rounded-4xl ring-1 ring-inset ring-slate-900/10" />
-          </Tab.Panels>
+          <div className="mt-10 flex justify-center gap-x-6">
+            <Button href="https://docs.google.com/forms/d/e/1FAIpQLSeU4WnJpJy3uZDBAAT6GdDnKQtf9Q9pVLIK7OY7AWNrpU_AbA/viewform?usp=share_link" target="_blank">Get an estimate</Button>
+            {/* <Button
+              href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+              variant="outline"
+            >
+              <svg
+                aria-hidden="true"
+                className="h-3 w-3 flex-none fill-blue-600 group-active:fill-current"
+              >
+                <path d="m9.997 6.91-7.583 3.447A1 1 0 0 1 1 9.447V2.553a1 1 0 0 1 1.414-.91L9.997 5.09c.782.355.782 1.465 0 1.82Z" />
+              </svg>
+              <span className="ml-3">Watch video</span>
+            </Button> */}
+          </div>
         </>
       )}
     </Tab.Group>
@@ -218,11 +208,10 @@ export function SecondaryFeatures() {
       <Container>
         <div className="mx-auto max-w-2xl md:text-center">
           <h2 className="font-display text-3xl tracking-tight text-slate-900 sm:text-4xl">
-            Simplify everyday business tasks.
+            Follow The Directions Below To Get An Up-Front Estimate
           </h2>
           <p className="mt-4 text-lg tracking-tight text-slate-700">
-            Because you’d probably be a little confused if we suggested you
-            complicate your everyday business tasks instead.
+            We Make It Easy For You
           </p>
         </div>
         <FeaturesMobile />

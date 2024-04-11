@@ -21,14 +21,13 @@ export function CallToAction() {
       <Container className="relative">
         <div className="mx-auto max-w-lg text-center">
           <h2 className="font-display text-3xl tracking-tight text-white sm:text-4xl">
-            Get started today
+            No More Stressful, Last Minute Books
           </h2>
           <p className="mt-4 text-lg tracking-tight text-white">
-            It’s time to take control of your books. Buy our software so you can
-            feel like you’re doing something productive.
+            You’re One Click Away From Your Easiest Tax Season Yet 
           </p>
-          <Button href="/register" color="white" className="mt-10">
-            Get 6 months free
+          <Button href="https://docs.google.com/forms/d/e/1FAIpQLSeU4WnJpJy3uZDBAAT6GdDnKQtf9Q9pVLIK7OY7AWNrpU_AbA/viewform?usp=share_link" target="_blank" color="white" className="mt-10">
+            Get an estimate
           </Button>
         </div>
       </Container>

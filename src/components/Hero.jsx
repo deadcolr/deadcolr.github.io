@@ -43,7 +43,7 @@ export function Hero() {
       </div>
       <div className="mt-36 lg:mt-44">
         <p className="font-display text-base text-slate-900">
-          We'll focus on your books so you can outwork your competition.
+          We&apos;ll focus on your books so you can outwork your competition.
         </p>
         <ul
           role="list"

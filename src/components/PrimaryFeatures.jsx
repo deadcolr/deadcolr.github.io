@@ -12,20 +12,17 @@ import screenshotFeatures from '@/images/screenshots/features.png'
 const features = [
   {
     title: 'Payroll',
-    description:
-      "Keep track of everyone's salaries and whether or not they've been paid. Direct deposit not supported.",
+    description: "",
     image: screenshotFeatures,
   },
   {
     title: 'Invoicing',
-    description:
-      "All of your receipts organized into one place, as long as you don't mind typing in the data by hand.",
+    description: "",
     image: screenshotFeatures,
   },
   {
     title: 'Inventory',
-    description:
-      "We only sell our software to companies who don't deal with VAT at all, so technically we do all the VAT stuff they need.",
+    description: "",
     image: screenshotFeatures,
   },
   {
@@ -113,9 +110,7 @@ export function PrimaryFeatures() {
                         <Tab
                           className={clsx(
                             'font-display text-lg ui-not-focus-visible:outline-none',
-                            selectedIndex === featureIndex
-                              ? 'text-blue-600 lg:text-white'
-                              : 'text-blue-100 hover:text-white lg:text-white',
+                            'text-blue-100 hover:text-white lg:text-white',
                           )}
                         >
                           <span className="absolute inset-0 rounded-full lg:rounded-l-xl lg:rounded-r-none" />
@@ -141,9 +136,9 @@ export function PrimaryFeatures() {
                   <Tab.Panel key={feature.title} unmount={false}>
                     <div className="relative sm:px-6 lg:hidden">
                       <div className="absolute -inset-x-4 bottom-[-4.25rem] top-[-6.5rem] bg-white/10 ring-1 ring-inset ring-white/10 sm:inset-x-0 sm:rounded-t-xl" />
-                      <p className="relative mx-auto max-w-2xl text-base text-white sm:text-center">
+                      {/* <p className="relative mx-auto max-w-2xl text-base text-white sm:text-center">
                         {feature.description}
-                      </p>
+                      </p> */}
                     </div>
                     <div className="mt-10 w-[45rem] overflow-hidden rounded-xl bg-slate-50 shadow-xl shadow-blue-900/20 sm:w-auto lg:mt-0 lg:w-[67.8125rem]">
                       <Image
